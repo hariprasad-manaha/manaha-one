@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0b1020;
+}
+body {
+  background: var(--bg);
+  color: white;
+}
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.25s ease-out;
+}
+
+.card {
+  @apply bg-white/5 backdrop-blur rounded-2xl border border-white/10 shadow-lg;
+}
+.btn {
+  @apply rounded-xl px-4 py-2 font-medium;
+}
+.btn-primary {
+  @apply bg-blue-600 hover:bg-blue-700 text-white;
+}
+.input {
+  @apply bg-white/10 border border-white/20 rounded-xl px-3 py-2 w-full text-white placeholder-white/40;
+}
+.label {
+  @apply text-sm text-white/70;
+}
+.badge {
+  @apply inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm font-medium;
+}
